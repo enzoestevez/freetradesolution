@@ -49,6 +49,7 @@
          font-size: 2rem;
          cursor: pointer;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -77,12 +78,6 @@
             text-decoration: none;
             font-size: 1.2rem;
             font-weight: bold;
-        }
-        .nav-links a {
-            color: #776bc4;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
             position: relative;
             display: inline-block;
             transition: color 0.3s ease;
@@ -104,6 +99,7 @@
         .nav-links b {
             background: #50308c;
         }
+        
         section {
             margin-top: 100px;
             padding: 100px;
@@ -273,6 +269,7 @@
         @media (max-width: 768px) {
             .hamburger {
                 display: block;
+            }
             nav {
                 flex-direction: column;
                 align-items: flex-start;
@@ -283,7 +280,7 @@
                 gap: 10px;
                 width: 100%;
                 display: none;
-                transition: color 0.3s ease;
+               transition: color 0.3s ease;
             }
             .nav-links a {
               color: #776bc4;
@@ -307,7 +304,6 @@
 
             .nav-links a:hover::after {
               width: 100%;
-            }
             }
             .logo {
                 height: 40px;
@@ -342,7 +338,7 @@
                display: flex;
             }
         }
-</style>
+    </style>
 </head>
 <body>
 
@@ -350,7 +346,6 @@
         <div class="logo-container">
             <img src="logoalone.png" alt="Logo principal de freetrade solution" class="logo">
             <img src="freetradesolution.png" alt="Nombre de la empresa" class="logo-name">
-        </div>
         </div>
         <div class="hamburger" id="hamburger">
             &#9776;
@@ -433,7 +428,7 @@
             <p>Amolina@freetradesolution.com</p>
             <p>(+54) 11 6600-8636 (Alan Molina - Socio Gerente)</p>
             <p>(+54) 11 6696-3101 (Francisco Di Paolo - Socio Gerente)</p>
-            <p><a href="https://freetradesolutionarg.com" target="_blank">fretradesolutionarg.com</a></p>
+            <p><a href="https://www.Freetradesolution.com.ar" target="_blank">www.FreTradeSolution.com.ar</a></p>
             <p>Miguel cané 4046, Olivos, Argentina</p>
         </div>
     </section>
@@ -456,19 +451,17 @@
                     if (sectionTop < triggerPoint) {
                         section.classList.add("show");
                     }
-                     window.addEventListener("scroll", checkScroll);
-                     checkScroll(); // Para animar si ya están en pantalla al cargar
-                    });
-
-              // CORREGIDO: Función de hamburguesa
-                    const hamburger = document.getElementById('hamburger');
-                    const navLinks = document.getElementById('nav-links');
-
-                 hamburger.addEventListener('click', () => {
-                 navLinks.classList.toggle('show');
-                     });
-               }
+                });
+            }
+        
+            window.addEventListener("scroll", checkScroll);
+            checkScroll(); // Para animar si ya están en pantalla al cargar
+        });
+        const hamburger = document.getElementById('hamburger');
+           const navLinks = document.getElementById('nav-links');
+            hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
     </script>
 </body>
 </html>
-
