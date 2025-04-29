@@ -456,17 +456,18 @@
                     if (sectionTop < triggerPoint) {
                         section.classList.add("show");
                     }
+                     window.addEventListener("scroll", checkScroll);
+                     checkScroll(); // Para animar si ya están en pantalla al cargar
                     });
-           const hamburger = document.getElementById('hamburger');
-           const navLinks = document.getElementById('nav-links');
-            hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-                });
-            }
-        
-            window.addEventListener("scroll", checkScroll);
-            checkScroll(); // Para animar si ya están en pantalla al cargar
-        });
+
+              // CORREGIDO: Función de hamburguesa
+                    const hamburger = document.getElementById('hamburger');
+                    const navLinks = document.getElementById('nav-links');
+
+                 hamburger.addEventListener('click', () => {
+                 navLinks.classList.toggle('show');
+                     });
+               }
     </script>
 </body>
 </html>
