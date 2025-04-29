@@ -44,6 +44,11 @@
             z-index: 1000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+        .hamburger {
+         display: none;
+         font-size: 2rem;
+         cursor: pointer;
+        }
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -266,6 +271,8 @@
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
+            .hamburger {
+                display: block;
             nav {
                 flex-direction: column;
                 align-items: flex-start;
@@ -331,6 +338,9 @@
                 bottom: 20px;
                 right: 20px;
             }
+            .nav-links.show {
+               display: flex;
+            }
         }
 </style>
 </head>
@@ -341,6 +351,10 @@
             <img src="logoalone.png" alt="Logo principal de freetrade solution" class="logo">
             <img src="freetradesolution.png" alt="Nombre de la empresa" class="logo-name">
         </div>
+        </div>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+          </div>
         <div class="nav-links">
             <a href="#quienes">Quiénes Somos</a>
             <a href="#quehacemos">Qué Hacemos</a>
@@ -442,6 +456,11 @@
                     if (sectionTop < triggerPoint) {
                         section.classList.add("show");
                     }
+                    });
+           const hamburger = document.getElementById('hamburger');
+           const navLinks = document.getElementById('nav-links');
+            hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
                 });
             }
         
