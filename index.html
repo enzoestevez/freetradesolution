@@ -73,6 +73,29 @@
             font-size: 1.2rem;
             font-weight: bold;
         }
+        .nav-links a {
+            color: #776bc4;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+        .nav-links a::after {
+           content: "";
+           position: absolute;
+           left: 0;
+           bottom: -4px;
+           width: 0;
+           height: 2px;
+           background-color: #776bc4;
+           transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+           width: 100%;
+        }
         .nav-links b {
             background: #50308c;
         }
