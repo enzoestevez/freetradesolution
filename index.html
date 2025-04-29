@@ -283,10 +283,123 @@
                 right: 20px;
             }
         }
-    </style>
+</style>
 </head>
 <body>
-<!-- contenido igual -->
+
+    <nav>
+        <div class="logo-container">
+            <img src="logoalone.png" alt="Logo principal de freetrade solution" class="logo">
+            <img src="freetradesolution.png" alt="Nombre de la empresa" class="logo-name">
+        </div>
+        <div class="nav-links">
+            <a href="#quienes">Quiénes Somos</a>
+            <a href="#quehacemos">Qué Hacemos</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+    
+
+    <div class="header">
+    </div>
+    
+    <section id="quienes" class="quienes-bg section">
+        <h2><span style="font-weight: 900;">Quiénes Somos</span></h2>
+        <p>Somos una empresa Argentina con experiencia prestigiosa en el área del comercio internacional, brindando soluciones en compras de repuestos para máquinas industriales en el exterior. Colaboramos con el departamento de comex/compras de nuestros clientes para que minimicen costos y tiempos de búsqueda, realizando nuestro trabajo de manera ágil y rápida.</p>
+    </section>
+    
+    <section id="quehacemos" class="hacemos-bg section">
+        <h2><strong>Qué Hacemos</strong></h2>
+        <p>Ofrecemos un servicio eficiente de importación de repuestos para todo tipo de maquinaria industrial trabajamos con proveedores internacionales de confianza para garantizar piezas originales, de alta calidad y con tiempos de entrega rápidos. Nos aseguramos de ofrecer asesoría técnica personalizada para que cada cliente obtenga los repuestos adecuados para sus necesidades, optimizando el rendimiento y la productividad de sus equipos.</p>
+    </section>
+    
+    <section id="rubro" class="rubros section">
+        <h2>Rubros</h2>
+        <div class="mapa-fondo">
+            <div class="rubro">
+                <img src="auto.png" alt="Automotriz" class="imagen-translucida">
+                <p>Automotriz</p>
+            </div>
+            <div class="rubro">
+                <img src="tene.jpg" alt="Alimenticia" class="imagen-translucida">
+                <p>Alimenticia</p>
+            </div>
+            <div class="rubro">
+                <img src="energia.jpg" alt="Energía" class="imagen-translucida">
+                <p>Energía</p>
+            </div>
+            <div class="rubro">
+                <img src="grafica.png" alt="Gráfica" class="imagen-translucida">
+                <p>Gráfica</p>
+            </div>
+            <div class="rubro">
+                <img src="metal.png" alt="Metalmecánica" class="imagen-translucida">
+                <p>Metalmecánica</p>
+            </div>
+            <div class="rubro">
+                <img src="papel.png" alt="Papelera" class="imagen-translucida">
+                <p>Papelera</p>
+            </div>
+            <div class="rubro">
+                <img src="gra.jpg" alt="Petrolera" class="imagen-translucida">
+                <p>Petrolera</p>
+            </div>
+            <div class="rubro">
+                <img src="qui.jpg" alt="Química" class="imagen-translucida">
+                <p>Química</p>
+            </div>
+        </div>
+    </section>
+    <section id="contacto" class="section-bg section">
+        <div class="contact-form">
+            <form action="https://formspree.io/f/xdkellld" method="POST">
+                <label for="nombre">Nombre y Apellido</label>
+                <input type="text" name="nombre" id="nombre" required>
+    
+                <label for="email">Correo Electrónico</label>
+                <input type="email" name="email" id="email" required>
+    
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
+    
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="contacto-info">
+            <p><strong>Ventas</strong></p>
+            <p>Amolina@freetradesolution.com</p>
+            <p>(+54) 11 6600-8636 (Alan Molina - Socio Gerente)</p>
+            <p>(+54) 11 6696-3101 (Francisco Di Paolo - Socio Gerente)</p>
+            <p><a href="https://www.Freetradesolution.com.ar" target="_blank">www.FreTradeSolution.com.ar</a></p>
+            <p>Miguel cané 4046, Olivos, Argentina</p>
+        </div>
+    </section>
+
+    
+    <div class="whatsapp-button">
+        <a href="https://wa.me/541166008636" target="_blank">
+            <img src="imgwpp.png" alt="WhatsApp">
+        </a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".section");
+        
+            function checkScroll() {
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const triggerPoint = window.innerHeight - 100; 
+        
+                    if (sectionTop < triggerPoint) {
+                        section.classList.add("show");
+                    }
+                });
+            }
+        
+            window.addEventListener("scroll", checkScroll);
+            checkScroll(); // Para animar si ya están en pantalla al cargar
+        });
+    </script>
 </body>
 </html>
 
